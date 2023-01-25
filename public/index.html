@@ -3,21 +3,33 @@
   <head>
     <meta charset="utf-8" />
     <title>React App</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="../src/index.css">
   </head>
   <body>
     <header class="top-section">This is header section</header>
-    <div class="section-section">
-      <nav class="main-nav">
-        <ul>
-          <li><a href=""></a>Home</li>
-          <li><a href=""></a>Items in Stock</li>
-          <li><a href=""></a>Kitchen</li>
-          <li><a href=""></a>Living</li>
-          <li><a href=""></a>Featured Brands</li>
-        </ul>
+      <!--From bootstrap-->
+      <nav class="navbar navbar-dark bg-dark">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
       </nav>
-      <img class = "logo" src="https://images.unsplash.com/photo-1611250282006-4484dd3fba6b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" alt="logo image">
+      <!--End from bootstrap-->
+      <!--nav list from bootstrap-->
+      <div class="collapse" id="navbarToggleExternalContent">
+        <nav class="bg-dark p-4">
+          <a href="">Home</a>
+          <a href="">Items in Stock</a>
+          <a href="">Kitchen</a>
+          <a href="">Living</a>
+          <a href="">Featured Brands</a>
+        </nav>
+      </div>
+      <!--End nav list from bootstrap-->
+      <div class="logo">
+        <a href="#Home"><img class = "logo" src="https://images.unsplash.com/photo-1611250282006-4484dd3fba6b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" alt="logo image">
+        </a> 
+      </div>
       <div class="user-account">
         <a href="">Access user account</a>
         <a href="">Access shopping cart</a>
@@ -27,8 +39,12 @@
       </div>
     </div>
     
-    <section>Top section for dynamic picture for featured product</section>
-    <section>Bottom section for individual brand link</section>
-    <footer>Sign up section and icons, copyright and so on...</footer>
+    <section class="products-display">Top section for dynamic picture for featured product</section>
+    <section class="brands-display">Bottom section for individual brand link</section>
+    <footer class="footer">Sign up section and icons, copyright and so on...</footer>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
   </body>
 </html>
