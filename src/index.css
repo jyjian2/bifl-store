@@ -38,8 +38,14 @@ body {
   margin-top: 2em auto;
 }
 
-@media (max-width: 768px) {
 
+@media (max-width: 480px) {
+  .navbar-header {
+    background-color: white;
+  }
+  nav.navbar {
+    border: 0px;
+  }
   * {
     text-align: center;
   }
