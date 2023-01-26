@@ -2,6 +2,18 @@
   box-sizing: border-box;
 }
 
+@media (max-width: 768px) {
+  .navbar-header {
+    background-color: white;
+  }
+  nav.navbar {
+    border: 0px;
+  }
+  * {
+    text-align: center;
+  }
+}
+
 body {
   width: 90%;
   margin: 2em auto;
@@ -39,14 +51,3 @@ body {
 }
 
 
-@media (max-width: 480px) {
-  .navbar-header {
-    background-color: white;
-  }
-  nav.navbar {
-    border: 0px;
-  }
-  * {
-    text-align: center;
-  }
-}
