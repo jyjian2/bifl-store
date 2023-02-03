@@ -20,7 +20,11 @@ class Carousel extends Component {
             modules={[Navigation, Pagination, Autoplay, Scrollbar]}
             spaceBetween={0}
             slidesperview={3}
-            navigation
+            navigation={true}
+            autoplay={{
+                delay: 4000,
+                disableOnInteraction: false,
+            }}
             pagination={{ clickable: true }}
             scrollbar={{ draggable: true }}
             onSwiper={(swiper) => console.log(swiper)}
