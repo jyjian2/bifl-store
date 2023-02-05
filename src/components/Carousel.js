@@ -1,6 +1,12 @@
 import React, {Component} from "react";
 import { Navigation, Pagination, Autoplay, Scrollbar} from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import slideImg1 from '../images/slideImg1.jpg';
+import slideImg2 from '../images/slideImg2.jpg';
+import slideImg3 from '../images/slideImg3.jpg';
+import slideImg4 from '../images/slideImg4.jpg';
+
+
 
 
 import 'swiper/css/bundle';
@@ -12,9 +18,11 @@ import './Carousel.css';
 
 
 class Carousel extends Component {
-    
-    
+
     render() {
+
+        const slideImagesNames = ["slideImg1", "slideImg2", "slideImg3", "slideImg4"]
+
         return (
             
             <Swiper 
@@ -31,10 +39,11 @@ class Carousel extends Component {
             onSwiper={(swiper) => console.log(swiper)}
             onSlideChange={() =>  console.log('slide change')}
             >
-            <SwiperSlide>Slide 1</SwiperSlide>
-            <SwiperSlide>Slide 2</SwiperSlide>
-            <SwiperSlide>Slide 3</SwiperSlide>
-            <SwiperSlide>Slide 4</SwiperSlide>
+            {slideImagesNames.map(image=> 
+            <SwiperSlide>
+            <img class="slide_image" src={require(`../images/${image}.jpg`)}></img>
+            </SwiperSlide>)}
+            
     
             </Swiper>
             
