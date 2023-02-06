@@ -41,20 +41,8 @@ body {
   margin-top: 2em auto;
 }
 
-.products-display {
-  background-color: antiquewhite;
-  margin-top: 2em auto;
-}
-
-.brands-display {
-  margin-top: 4em auto;
-}
-
 .footer {
   background-color: rgb(97, 178, 186);
   margin-top: 2em auto;
 }
 
-.featured-brands-header {
-  margin: 50px 25px;
-}
