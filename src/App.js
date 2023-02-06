@@ -5,7 +5,12 @@ import React, {Component} from 'react';
 
 class App extends Component {
     render() {
-        return (<Carousel />, <BrandCard />);
+        return (
+            <React.Fragment>
+            <Carousel />
+            <BrandCard />
+            </React.Fragment>
+            );
     }
 }
 
