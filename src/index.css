@@ -31,6 +31,10 @@ body {
 .top-section {
   background-color: #6497e8;
   font-size: 1em;
+  margin-top: 0px;
+  height: 3em;
+  text-align: center;
+  padding: 10px;
 }
 
 .second-section {
@@ -43,7 +47,7 @@ body {
 }
 
 .brands-display {
-  margin-top: 2em auto;
+  margin-top: 4em auto;
 }
 
 .footer {
