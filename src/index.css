@@ -44,5 +44,10 @@ body {
 .footer {
   background-color: rgb(97, 178, 186);
   margin-top: 2em auto;
+  height: 350px;
 }
 
+.footer-inner {
+  margin-top: 3em;
+  height: 300px;
+}
