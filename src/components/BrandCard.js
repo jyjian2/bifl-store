@@ -13,11 +13,11 @@ function BrandCard() {
                             Featured Brands
                         </h2>
                     </div>
-                    <div class="featured-brand-cards">
+                    <div class="featured-brand-cards" >
                     <Row xs={1} md={2} lg={4}>
                     {Array.from({ length:4 }).map((_, idx) => (
                         <Col>
-                            <Card style={{width: '18rem'}} className="m-4" >
+                            <Card style={{width: '18rem'}} className="my-3 mx-auto" >
                                 <Card.Img variant="top" src={faribaultImg} />
                                 <Card.Body>
                                     <Card.Title>Faribault Wool Blanket</Card.Title>
