@@ -43,11 +43,17 @@ body {
 
 .footer {
   background-color: rgb(97, 178, 186);
-  margin-top: 2em auto;
   height: 350px;
+  margin-top: 50px;
+  position: relative;
 }
 
 .footer-inner {
-  margin-top: 3em;
   height: 300px;
 }
+
+.sbscription-row {
+  position: absolute;
+  margin-top: 25px;
+}
+
