@@ -44,16 +44,13 @@ body {
 .footer {
   background-color: rgb(97, 178, 186);
   height: 350px;
-  margin-top: 50px;
-  position: relative;
 }
 
 .footer-inner {
-  height: 300px;
+  background-color: rgb(97, 178, 186);
+  height: 300;
 }
 
-.sbscription-row {
-  position: absolute;
-  margin-top: 25px;
+.footer-content {
+  padding: 30px 5px;
 }
-
