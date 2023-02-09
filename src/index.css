@@ -44,6 +44,7 @@ body {
 .footer {
   background-color: rgb(97, 178, 186);
   height: 350px;
+  margin-top: 50px;
 }
 
 .footer-inner {
