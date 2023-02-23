@@ -2,6 +2,7 @@ import './App.css';
 import Carousel from './components/Carousel';
 import BrandCard from './components/BrandCard';
 import React, {Component} from 'react';
+import ParentBrand from './components/ParentBrand';
 
 class App extends Component {
     
@@ -11,7 +12,7 @@ class App extends Component {
 
                 <React.Fragment>
                 <Carousel />
-                <BrandCard />
+                <ParentBrand />
                 </React.Fragment>
             );
     }

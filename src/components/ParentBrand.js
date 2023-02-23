@@ -5,7 +5,7 @@ import BrandCard from "./BrandCard";
 
 export default function ParentBrand() {
 
-    const [brands, getBrands] = useState('');
+    const [brands, setBrands] = useState('');
 
     const url = 'http://localhost:3001/api/brands';
 
@@ -14,25 +14,29 @@ export default function ParentBrand() {
     }, []);
 
     const getAllBrands = () => {
-        axios.get(`$(url)`)
+        axios.get(url)
         .then((response) => {
-            const allBrands = response.data;
-            getBrands(allBrands);
+            if (response.data.success) {
+                const allBrands = response.data.data;
+                setBrands(allBrands);
+            } else {
+                console.error("response failed");
+            }
         })
-        .catch(error => console.error(`error: $(error)`));
+        .catch(error => console.error(`Error: $(error)`));
     }
 
-    return (
-        <section class="container-fluid brands-display">
-            <div class="featured-brands-header">
-                <h2 class="featured-brands-text">
-                    Featured Brands
-                </h2>
-            </div>
-            <div class="featured-brand-cards" >
-
-            </div>
-        </section>
-    )
+        return (
+            <section class="container-fluid brands-display">
+                <div class="featured-brands-header">
+                    <h2 class="featured-brands-text">
+                        Featured Brands
+                    </h2>
+                </div>
+                <div class="featured-brand-cards" >
+                    <BrandCard brands={brands}/>
+                </div>
+            </section>
+        )
 }
 
