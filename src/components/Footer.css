@@ -1,0 +1,33 @@
+* {
+    box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+    .navbar-header {
+        background-color: white;
+    }
+
+    * {
+        text-align: center;
+    }
+}
+
+@media (min-width: 768px) {
+    * {
+        text-align: center;
+    }
+}
+
+.footer {
+    background-color: rgb(97, 178, 186);
+    height: 350px;
+}
+
+.footer-inner {
+    background-color: rgb(97, 178, 186);
+    height: 300;
+}
+
+.footer-content {
+    padding: 30px 5px;
+}
