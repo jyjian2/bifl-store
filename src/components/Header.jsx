@@ -1,5 +1,12 @@
 import React from 'react';
 import './Header.css';
+import {
+    Router,
+    Routes,
+    Route,
+    Link,
+  } from "react-router-dom";
+import { Navbar, Nav } from 'react-bootstrap';
 
 export default function Header() {
     return (
@@ -52,7 +59,7 @@ export default function Header() {
                                     <a href="/home" class="nav-link">Home</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="/products" class="nav-link">All Products</a>
+                                    <Link to="products">All Products</Link>
                                 </li>
                                 <li class="nav-item">
                                     <a href="/kitchen" class="nav-link">Kitchen</a>
