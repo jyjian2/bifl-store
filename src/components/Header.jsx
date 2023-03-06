@@ -62,7 +62,7 @@ export default function Header() {
                                     <Link to="products">All Products</Link>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="/kitchen" class="nav-link">Kitchen</a>
+                                    <Link to="products/kitchen">Kitchen</Link>
                                 </li>
                                 <li class="nav-item">
                                     <a href="/living" class="nav-link">Living</a>

@@ -9,6 +9,7 @@ import ParentBrand from './components/ParentBrand';
 import Footer from './components/Footer';
 import OurStory from './pages/OurStory';
 import Header from './components/Header';
+import ParentByCategory from './components/ParentByCategory';
 import ParentProduct from './components/ParentProduct';
 
 
@@ -28,6 +29,9 @@ class App extends Component {
                         </div>
                     }/>
                     <Route path="products" element={<ParentProduct />}/>
+                    <Route path="products/:category" element={
+                    <ParentByCategory />
+                    }/>
                 </Routes>
                 <Footer />
                 </React.Fragment>
