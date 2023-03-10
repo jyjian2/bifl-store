@@ -4,6 +4,7 @@ import React, { Component } from 'react';
 import {
     Routes,
     Route,
+    useParams,
   } from "react-router-dom";
 import ParentBrand from './components/ParentBrand';
 import Footer from './components/Footer';

@@ -11,21 +11,22 @@ import {
 export default function ParentByCategory(props) {
 
     const [products, setProducts] = useState([]);
+    let category = useParams().category;
     
 
     const url = 'http://localhost:3001/api/products';
 
-    useEffect(() => {
-        getAllProducts();
+    useEffect((category) => {
+        getAllProducts(category);
     }, []);
 
 
-    let { category } = useParams();
-    console.log(category);
+    
     const getAllProducts = () => {
         axios.get(url+`/${category}`)
             .then((response) => {
                 console.log(response)
+                console.log(category)
                 if (response.data.success) {
                     const allProducts = response.data.data;
                     setProducts(allProducts);
@@ -42,7 +43,7 @@ export default function ParentByCategory(props) {
         <section class="container-fluid products-display">
             <div class="featured-products-header">
                 <h2 class="featured-products-text">
-                    Kitchen Products
+                    {`${category} Product`}
                 </h2>
             </div>
             <div class="featured-product-cards" >
