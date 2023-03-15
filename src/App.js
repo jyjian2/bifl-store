@@ -30,9 +30,8 @@ class App extends Component {
                         </div>
                     }/>
                     <Route path="products" element={<ParentProduct />}/>
-                    <Route path="products/:category" element={
-                    <ParentByCategory />
-                    }/>
+                    <Route path="products/:category" element={<ParentByCategory />}/>
+                    
                 </Routes>
                 <Footer />
                 </React.Fragment>
