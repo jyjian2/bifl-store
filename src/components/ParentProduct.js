@@ -3,9 +3,12 @@ import axios from "axios";
 import ProductCard from "./ProductCard";
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
+import { useDataLoader } from 'react-router-dom';
 
 
 export default function ParentProduct() {
+    //Use dataloader to get data that loader has returned
+    const products = useDataLoader();
 
     return (
         <section class="container-fluid products-display">

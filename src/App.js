@@ -28,12 +28,22 @@ const router = createBrowserRouter(
             }
         >
             <Route
+                element=<ParentProduct />
+                path="products"
+                loader={async () => {
+                    return fetch(
+                        "http://localhost:3001/api/products"
+                    )
+                }}
+                errorElement={<ErrorBoundary />}
+            />
+            <Route
                 element=<SingleProduct />
                 path="products/:productId"
                 loader={async ({ request, params }) => {
                     return fetch(
                         console.log(params.productId)
-                            `products/${params.productId}`,
+                        `http://localhost:3001/api/products/${params.productId}`,
                         { name: request.name },
                         { description: request.destination },
                         { category: request.category },
