@@ -7,30 +7,6 @@ import Row from 'react-bootstrap/Row';
 
 export default function ParentProduct() {
 
-    const [products, setProducts] = useState([]);
-
-    const url = 'http://localhost:3001/api/products';
-
-    useEffect(() => {
-        getAllProducts();
-    }, []);
-
-    console.log(products);
-    const getAllProducts = () => {
-        axios.get(url)
-            .then((response) => {
-                if (response.data.success) {
-                    const allProducts = response.data.data;
-                    setProducts(allProducts);
-                } else {
-                    console.error("response failed");
-                }
-            })
-            .catch(error => console.error(`Error: $(error)`));
-    }
-
-
-
     return (
         <section class="container-fluid products-display">
             <div class="featured-products-header">
