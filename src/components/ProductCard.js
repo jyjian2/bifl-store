@@ -1,6 +1,5 @@
 import Card from 'react-bootstrap/Card';
 import './ProductCard.css';
-import { useState } from 'react';
 
 export default function ProductCard(props) {
     const product = props.product

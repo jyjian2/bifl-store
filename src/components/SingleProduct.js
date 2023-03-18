@@ -1,4 +1,4 @@
-/*import React, { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import axios from "axios";
 import {
     useParams,
@@ -18,4 +18,4 @@ import Col from 'react-bootstrap/Col';
     );
   }
   
-  export default SingleProduct;*/
+  export default SingleProduct;
