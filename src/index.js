@@ -38,10 +38,11 @@ const router = createBrowserRouter(
             <Route
                 element=<ParentProduct />
                 path="products"
-                loader={async () => {
-                    const response = await axios.get("http://localhost:3001/api/products")
+                loader={async (req, params) => {
+                    
+                    const url = new URL(req.request.url)
+                    const response = await axios.get(`http://localhost:3001/api/products${url.search}`)
 
-                    console.log(response);
                     if (response.status === 200) {
                         return response.data.data
                     } else {

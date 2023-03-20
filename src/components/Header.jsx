@@ -62,13 +62,13 @@ export default function Header() {
                                     <Link to="products">All Products</Link>
                                 </li>
                                 <li class="nav-item">
-                                    <Link to="products/kitchen">Kitchen</Link>
+                                    <Link to="products?category=kitchen">Kitchen</Link>
                                 </li>
                                 <li class="nav-item">
-                                    <Link to="products/living">Living</Link>
+                                    <Link to="products?category=living">Living</Link>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="items" class="nav-link">Items on Sale</a>
+                                    <a href="products?onSale=true" class="nav-link">Items on Sale</a>
                                 </li>
                             </ul>
                         </div>
