@@ -15,6 +15,9 @@ const Register = () => {
     }
 
     // register finction that use axios to post data to db
+    const register = e => {
+        
+    }
 
     // return a div that cotain field for user to type in information
     return (
@@ -63,7 +66,7 @@ const Register = () => {
                                             controlId="formBasicCheckbox"
                                         ></Form.Group>
                                         <div className="d-grid">
-                                            <Button variant="primary" type="submit">
+                                            <Button variant="primary" type="submit" onClick={register}>
                                                 Create Account
                                             </Button>
                                         </div>
