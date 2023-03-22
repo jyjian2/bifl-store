@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { Col, Button, Row, Container, Card, Form } from 'react-bootstrap';
+import userEvent from "@testing-library/user-event";
 
 const Register = () => {
     const [user, setUser] = useState({
@@ -14,13 +15,21 @@ const Register = () => {
         const {name, value} = e.target
         setUser({
             ...user,
-            [name]:value
+            name:value
         })
     }
 
     // register finction that use axios to post data to db
     const register = e => {
-
+        const register = () => {
+            const {name, email, password} = user
+            if (name && email && password) {
+                axios.post("", user)
+                .then(res=>comsole.log(res))
+            } else {
+                alert("Invalid Input")
+            }
+        }
     }
 
     // return a div that cotain field for user to type in information
@@ -86,3 +95,5 @@ const Register = () => {
     </div>
     );
 }
+
+export default Register
