@@ -11,12 +11,16 @@ const Register = () => {
     })
     // function to call when user type in input
     const handleChange = e => {
-
+        const {name, value} = e.target
+        setUser({
+            ...user,
+            [name]:value
+        })
     }
 
     // register finction that use axios to post data to db
     const register = e => {
-        
+
     }
 
     // return a div that cotain field for user to type in information
@@ -52,13 +56,6 @@ const Register = () => {
                                             controlId="formBasicPassword"
                                         >
                                             <Form.Label>Password</Form.Label>
-                                            <Form.Control type="password" name="password" value={user.password} onChange={handleChange} placeholder="Password" />
-                                        </Form.Group>
-                                        <Form.Group
-                                            className="mb-3"
-                                            controlId="formBasicPassword"
-                                        >
-                                            <Form.Label>Confirm Password</Form.Label>
                                             <Form.Control type="password" name="password" value={user.password} onChange={handleChange} placeholder="Password" />
                                         </Form.Group>
                                         <Form.Group
