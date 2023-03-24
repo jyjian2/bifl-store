@@ -10,6 +10,7 @@ const Register = () => {
         email: "",
         password: ""
     })
+    
     // function to call when user type in input
     const handleChange = e => {
         const {name, value} = e.target

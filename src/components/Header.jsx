@@ -56,7 +56,7 @@ export default function Header() {
                         <div id="navbarNav" class="collapse navbar-collapse my-2">
                             <ul class="navbar-nav nav-fill w-100">
                                 <li class="nav-item">
-                                    <a href="/home" class="nav-link">Home</a>
+                                    <a href="/" class="nav-link">Home</a>
                                 </li>
                                 <li class="nav-item">
                                     <Link to="products">All Products</Link>
