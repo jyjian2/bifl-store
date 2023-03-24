@@ -16,6 +16,7 @@ import Footer from './components/Footer';
 import ParentProduct from './components/ParentProduct';
 import SingleProduct from './components/SingleProduct';
 import Carousel from './components/Carousel';
+import Register from './components/Register';
 
 
 const router = createBrowserRouter(
@@ -65,6 +66,12 @@ const router = createBrowserRouter(
                     }
                 }}
                 
+            />
+
+            {/* user registration page route */}
+            <Route
+                element=<Register />
+                path="/account/registry"
             />
         </Route>
     )

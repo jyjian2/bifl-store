@@ -24,7 +24,9 @@ export default function Footer() {
                                     placeholder="Here to Enter your email adress" />
                             </div>
                             <div class="col-md-3 my-2 footer-content">
+                            <Link to="/account/registry">
                                 <button type="submit" class="btn btn-outline-light">Sign up</button>
+                            </Link>
                             </div>
                         </div>
                     </form>

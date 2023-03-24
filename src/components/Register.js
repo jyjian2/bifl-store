@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { Col, Button, Row, Container, Card, Form } from 'react-bootstrap';
-import userEvent from "@testing-library/user-event";
 
 const Register = () => {
     const [user, setUser] = useState({
@@ -26,7 +25,7 @@ const Register = () => {
             const {name, email, password} = user
             if (name && email && password) {
                 axios.post("", user)
-                .then(res=>comsole.log(res))
+                .then(res=>console.log(res))
             } else {
                 alert("Invalid Input")
             }
@@ -39,7 +38,7 @@ const Register = () => {
         <div>
         {/* use bootstrap registration template */ }
         <Container>
-            <Row className="vh-100 d-flex justify-content-center align-items-center">
+            <Row className="d-flex justify-content-center align-items-center">
                 <Col md={8} lg={6} xs={12}>
                     <Card className="px-4">
                         <Card.Body>
