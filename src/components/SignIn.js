@@ -3,10 +3,9 @@ import axios from "axios";
 import { Col, Button, Row, Container, Card, Form } from 'react-bootstrap';
 import { Link } from "react-router-dom";
 
-const Register = () => {
+const SignIn = () => {
     const [user, setUser] = useState({
         // User has name, email, and password
-        name: "",
         email: "",
         password: ""
     })
@@ -20,11 +19,11 @@ const Register = () => {
         })
     }
 
-    // register function that use axios to post data to db
-    const register = () => {
-        const { name, email, password } = user
-        if (name && email && password) {
-            axios.post("http://localhost:3001/api/register", user)
+    // Signin function that use axios to post data to db
+    const signin = () => {
+        const { email, password } = user
+        if (email && password) {
+            axios.post("http://localhost:3001/api/login", user)
                 .then(res => console.log(res))
         } else {
             alert("Invalid Input")
@@ -35,7 +34,7 @@ const Register = () => {
     return (
 
         <div>
-            {/* use bootstrap registration template */}
+            {/* use bootstrap login template */}
             <Container>
                 <Row className="d-flex justify-content-center align-items-center">
                     <Col md={8} lg={6} xs={12}>
@@ -47,14 +46,9 @@ const Register = () => {
                                     </h2>
                                     <div className="mb-3">
                                         <Form>
-                                            <Form.Group className="mb-3" controlId="Name">
-                                                <Form.Label className="text-center">Name</Form.Label>
-                                                <Form.Control type="text" name="name" value={user.name} onChange={handleChange} placeholder="Enter Name" />
-                                            </Form.Group>
-
                                             <Form.Group className="mb-3" controlId="formBasicEmail">
                                                 <Form.Label className="text-center">
-                                                    Email address
+                                                    Email
                                                 </Form.Label>
                                                 <Form.Control type="email" name="email" value={user.email} onChange={handleChange} placeholder="Enter email" />
                                             </Form.Group>
@@ -66,24 +60,21 @@ const Register = () => {
                                                 <Form.Label>Password</Form.Label>
                                                 <Form.Control type="password" name="password" value={user.password} onChange={handleChange} placeholder="Password" />
                                             </Form.Group>
-                                            <Form.Group
-                                                className="mb-3"
-                                                controlId="formBasicCheckbox"
-                                            ></Form.Group>
                                             <div className="d-grid">
-                                                <Button variant="primary" type="submit" onClick={register}>
-                                                    Create Account
+                                                <Button variant="primary" type="submit" onClick={signin}>
+                                                    Sign In
                                                 </Button>
                                             </div>
                                         </Form>
                                         <div className="mt-3">
                                             <p className="mb-0  text-center">
-                                                Already have an account??{' '}
-                                                <Link to={"/account/signin"}>
+                                                Doesn't have an account?{' '}
+                                                <Link to={'/account/registry'}>
                                                     <a href="{''}" className="text-primary fw-bold">
-                                                    Sign In
-                                                </a>
+                                                        Create One
+                                                    </a>
                                                 </Link>
+
                                             </p>
                                         </div>
                                     </div>
@@ -97,4 +88,4 @@ const Register = () => {
     );
 }
 
-export default Register
+export default SignIn

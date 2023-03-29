@@ -1,9 +1,6 @@
 import React from 'react';
 import './Header.css';
 import {
-    Router,
-    Routes,
-    Route,
     Link,
   } from "react-router-dom";
 import { Navbar, Nav } from 'react-bootstrap';
